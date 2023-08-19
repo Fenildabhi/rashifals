@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css.map" class="" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" class="">
+    <link rel="stylesheet" href="assets/css/stylesheet.css" class="" />
+    <link rel="stylesheet" href="assets/css/index.css" class="" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <section class="side_bar_dashboard">
+        <!-- <div class="side_bar_inner">
+            <ul class="side_bar_option">
+                <li class="side_bar_option_inner active d-flex align-items-center ">
+                    <div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <span>Dashboard</span>
+                    </div>
+                </li>
+                <li class="side_bar_option_inner d-flex align-items-center ">
+                    <div>
+                        <i class="fas fa-plus-circle"></i>
+                        
+                    </div>
+                    <div>
+                        <span>Add Product</span>
+                    </div>
+                </li>
+                <li class="side_bar_option_inner d-flex align-items-center ">
+                    <div>
+                        <i class="fas fa-luggage-cart"></i>
+                        
+                    </div>
+                    <div>
+                        <span>Order</span>
+                    </div>
+                </li>
+                <li class="side_bar_option_inner d-flex align-items-center ">
+                    <div>
+                        <i class="fas fa-rupee-sign"></i>
+                        
+                    </div>
+                    <div>
+                        <span>Payment</span>
+                    </div>
+                </li>
+            </ul>
+        </div> -->
+        <div>
+            <div>
+                <!-- <div id="sidemenu"></div> -->
+                <!-- -----------------------------------side menu start--------------------------------------------------- -->
+
+                <div class="main_outer_wrapper">
+                    <div class="projectBlock project-detail">
+                        <div class="header_admin d-flex align-items-center justify-content-between">
+                            <div></div>
+                            <div class="d-flex align-items-center">
+                                <div class="notification_icon">
+                                    <button><i class="far fa-bell"></i></button>
+                                </div>
+                                <div class="user">
+                                    <button class="user_inner dropdown-toggle" id="dropdownMenuButton2"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                            class="far fa-user"></i></button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <li><a class="dropdown-item " href="account_info.html">Account Info</a></li>
+                                        <li><a class="dropdown-item" href="../Web_panel/login.html">Login Settings</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_sidebar_main">
+                            <div class="back_button d-flex align-items-center justify-content-between">
+                                <a class="d-flex align-items-center font-bold" href="#" id="btnBackCardViewProject"
+                                    p_pro="" onclick="showModuleListView(); return false;">
+                                    <i
+                                        class="fas fa-angle-left mr-20 d-flex align-items-center justify-content-center"></i>
+                                    <!-- <i class="fas fa-angle-left"></i> -->
+                                    <span>Back</span>
+                                </a>
+                                <button class="sidebar_expand_button">
+                                    <i class="fa-light fa-bars-sort expand_icon" data-tooltip-body="tooltip"
+                                        data-original-title="Expand Sidebar"></i>
+                                </button>
+                                <button class="sidebar_collapse_button">
+                                    <i class="fas fa-times collapse_icon" data-tooltip-body="tooltip"
+                                        data-original-title="Collapse Sidebar"></i>
+                                </button>
+                            </div>
+                            <div class="sidebar_main_block">
+                                <div class="module-tabs project_details_tab_outer_block customScroll">
+                                    <ul class="nav nav-tabs flex-column project_details_tab mt-12 mb-12" id="myTab"
+                                        role="tablist">
+                                        <li class="nav-item" role="presentation" view="summery">
+                                            <button class="nav-link active" id="Dashboard" data-bs-toggle="tab"
+                                                data-bs-target="#Dashboard_1" type="button" role="tab"
+                                                aria-controls="summery" aria-selected="false">
+                                                <i class="fas fa-chart-line"></i>
+                                                <span>Dashboard</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="Inventory" data-bs-toggle="tab"
+                                                data-bs-target="#Inventory_1" type="button" role="tab"
+                                                aria-controls="detail" aria-selected="true" autocomplete="nope">
+                                                <i class="fas fa-boxes"></i>
+                                                <span>Inventory</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="Product" data-bs-toggle="tab"
+                                                data-bs-target="#Product_1" type="button" role="tab"
+                                                aria-controls="detail" aria-selected="true" autocomplete="nope">
+                                                <i class="fas fa-plus-circle"></i>
+                                                <span>Add Details</span>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="Poster-1" data-bs-toggle="tab"
+                                                data-bs-target="#Poster_1" type="button" role="tab"
+                                                aria-controls="notes" aria-selected="false">
+                                                <i class="far fa-images"></i>
+                                                <span>Poster</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- -----------------------------------side menu end--------------------------------------------------- -->
+            <div class="Dashboard_detail">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Dashboard_1" role="tabpanel" aria-labelledby="Dashboard">
+                        <div class="container-fluid">
+                            <div class="container-fluid">
+                                <div class="row g-3 mt-1">
+                                    <div class="col-3">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body p-2">
+                                                <h4>Order</h4>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="order-report down"><i
+                                                            class="fas fa-long-arrow-alt-down"><b>-5k</b></i> this
+                                                        week</span>
+                                                    <h2 class="text-end"><b>10</b></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body p-2">
+                                                <h4>Visitors</h4>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="order-report up"><i
+                                                            class="fas fa-long-arrow-alt-up up"><b>+5k</b></i> this
+                                                        week</span>
+                                                    <h2 class="text-end"><b>7,80,010</b></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body p-2">
+                                                <h4>Total Orders</h4>
+                                                <div>
+                                                    <h2 class="text-end"><b>2,80,010</b></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body p-2">
+                                                <h4>payment</h4>
+                                                <div>
+                                                    <h2 class="text-end"><b>7,00,000</b></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Daily Order chart</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div id="Order_chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Daily Order Payment</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div id="Order_payment"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Balance</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div id="Balance"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Cancel Order</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div id="cancle_Order"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Return Order</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div id="Order_retun"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="Dashboard_com_body_main">
+                                            <div class="Dashboard_com_body">
+                                                <div class="Dashboard_com_header">
+                                                    <h5>Product Listing</h5>
+                                                </div>
+                                                <div class="Dashboard_com_body_inner">
+                                                    <div class="count_listing">
+                                                        200
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Inventory_1" role="tabpanel" aria-labelledby="Inventory">
+                        <div class="manage_inventory">
+                            <h3>Manage Inventory</h3>
+                        </div>
+                        <div class="filter_listing_page d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <span>Filters: </span>
+                                </div>
+                                <div class="d-flex checkbox_list">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            All
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Active
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Inactive
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Incomplete
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <span><b class="selected_listing">1</b>selected</span>
+                                </div>
+                                <div>
+                                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                                        <input type="text" placeholder="Search.." name="search2">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-list table-responsive">
+                            <table class="table ">
+                                <thead class="table-light">
+                                    <tr class="align-middle">
+                                        <th>
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked" checked>
+                                        </th>
+                                        <th>Status</th>
+                                        <th>Image</th>
+                                        <th>SKU</th>
+                                        <th width="200px">Product Name</th>
+                                        <th>Date Created</th>
+                                        <th>Available</th>
+                                        <th>Fee Preview</th>
+                                        <th class="Price_and_shipping">Price and shipping cost</th>
+                                        <th>
+                                            <button type="button" class="btn btn-warning">Save</button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="order-select-box">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked" checked="">
+                                        </td>
+                                        <td>Active</td>
+                                        <td class="listing_img">
+                                            <img src="http://localhost/pari/Web_panel/assets/image/bracelets.jpg"
+                                                alt="">
+                                        </td>
+                                        <td>GOLD WEDDING RING</td>
+                                        <td>
+                                            <div>14K WHITE GOLD WEDDING RING LOW DOME COMFORT FIT (2MM) </div>
+                                            <span><b>ASIN: </b>B099FD59YT</span>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>14/07/2022 17:16:38</span>
+                                            </div>
+                                            <div>
+                                                <span>12/03/2023 11:13:48</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input class="text-end w-50" type="number" id="quantity" value="202"
+                                                name="quantity" min="1" max="">
+                                        </td>
+                                        <td><span>₹244.72</span></td>
+                                        <td>
+                                            <div class="text-end">
+                                                <span><i class="fas fa-rupee-sign"></i></span>
+                                                <input class="text-end w-50" type="number" id="Price" value="1299"
+                                                    name="Price" min="1" max="">
+                                            </div>
+                                            <div class="mt-3 text-end">
+                                                <span>MRP </span>
+                                                <input class="text-end w-50" type="number" id="MRP" value="1999"
+                                                    name="MRP" min="1" max="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-light">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Product_1" role="tabpanel" aria-labelledby="Product">
+                        <div class="container">
+                            <a class="btn rashi_collaps" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample" onclick="">
+                                <span class="collapse_icon"><i class="fas fa-chevron-up"></i><i
+                                        class="fas fa-chevron-down none" style="display: none;"></i></span>
+                                Link with href
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="Daily-tab" data-bs-toggle="tab"
+                                                data-bs-target="#Daily" type="button" role="tab" aria-controls="Daily"
+                                                aria-selected="true">Daily Update</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#profile" type="button" role="tab"
+                                                aria-controls="profile" aria-selected="false">Weekly Update</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                                data-bs-target="#contact" type="button" role="tab"
+                                                aria-controls="contact" aria-selected="false">About People</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="Astrology-tab" data-bs-toggle="tab"
+                                                data-bs-target="#Astrology" type="button" role="tab"
+                                                aria-controls="Astrology" aria-selected="false">Astrology(2023)</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="Daily" role="tabpanel"
+                                            aria-labelledby="Daily-tab">
+                                            <div class="update_common_card">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                                <div class="edit_icon">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <div class="update_common_card">
+                                                <textarea class="form-control" id="exampleFormControlTextarea2"
+                                                    rows="3"></textarea>
+                                                <div class="edit_icon">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="contact" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+                                            <div class="update_common_card">
+                                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                    placeholder="name@example.com">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                                <div class="edit_icon">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="Astrology" role="tabpanel"
+                                            aria-labelledby="Astrology-tab">...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Poster_1" role="tabpanel" aria-labelledby="Poster-1">
+                        <div class="container">
+                            <div class="">
+                                <ul class="banner_lists">
+                                    <li class="banner_collapse_main">
+                                        <div class="d-flex align-items-center">
+                                            <a class="banner_collapse" data-bs-toggle="collapse" href="#collapseExample"
+                                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                <i class="fas fa-chevron-up"></i>
+                                                <!-- <i class="fas fa-chevron-down"></i> -->
+                                            </a>
+                                            <span>main banner</span>
+                                        </div>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body mt-2">
+                                                <div class="old_photos">
+                                                    <img src="../Web_panel/assets/image/1-image-bg.jpg" lass="img-fluid 
+                                                        " alt="bg-main-image" class="not-responsive-main-baner">
+                                                    <div>
+                                                        <link
+                                                            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+                                                            rel="stylesheet">
+                                                        <div class="upload_new_photo">
+                                                            <div class="upload-files-container">
+                                                                <div class="drag-file-area">
+                                                                    <span class="material-icons-outlined upload-icon">
+                                                                        file_upload </span>
+                                                                    <h3 class="dynamic-message"> Drag & drop any file
+                                                                        here </h3>
+                                                                    <label class="label"> <span class="browse-files">
+                                                                            <input type="file"
+                                                                                class="default-file-input" /> <span
+                                                                                class="browse-files-text"></span> <span>
+                                                                            </span> </span> </label>
+                                                                </div>
+                                                                <span class="cannot-upload-message"> <span
+                                                                        class="material-icons-outlined">error</span>
+                                                                    Please select a file first <span
+                                                                        class="material-icons-outlined cancel-alert-button">cancel</span>
+                                                                </span>
+                                                                <div class="file-block">
+                                                                    <div class="file-info"> <span
+                                                                            class="material-icons-outlined file-icon">description</span>
+                                                                        <span class="file-name"> </span> | <span
+                                                                            class="file-size"> </span>
+                                                                    </div>
+                                                                    <span
+                                                                        class="material-icons remove-file-icon">delete</span>
+                                                                    <div class="progress-bar"> </div>
+                                                                </div>
+                                                                <button type="button" class="upload-button"> Upload
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.3/apexcharts.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    </script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
